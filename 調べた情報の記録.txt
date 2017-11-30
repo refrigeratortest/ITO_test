@@ -1,23 +1,24 @@
-��HTML�̒m�����K�v
+■HTMLの知識が必要
+http://www.tohoho-web.com/www.htm
+https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web
 
 
 
+■使用しているファイル
 
-���g�p���Ă���t�@�C��
-
-�E�X�^�C���V�[�g
+・スタイルシート
 jquery-ui.css
 jquery-ui.structure.css
 jquery-ui.theme.css
 kpt.css
 
-�Ehtml�t�@�C��
+・htmlファイル
 index.html
-����ʐݒ�
-���{�^�����N���b�N�����Ƃ��̃C�x���g���L��(��������Script�ōs����)
-�@�t�@�C��������script�^�O�����݂���
-�@
-�EScript
+→画面設定
+→ボタンをクリックしたときのイベントを記載(実処理はScriptで行われる)
+　ファイル下部にscriptタグが存在する
+　
+・Script
 userName.js
 modules.js
 jquery-1.11.1.js
@@ -25,44 +26,44 @@ json2.js
 jquery-ui.js
 
 
-����ʂɂ��Ă̋^��
-tab1��type��submit�����A����button�B���R�́H
-class��showTickets���Q�Ƃ��Ă��邪�ACSS�ɂ͑��݂��Ȃ��A����͕s�v�H
+※画面についての疑問
+tab1はtypeがsubmitだが、他はbutton。理由は？
+classのshowTicketsを参照しているが、CSSには存在しない、これは不要？
 
-�E�N������
+・起動処理
 loadFunc()
-��getAllTickets()�ł��ׂẴ`�P�b�g�����擾���Ă���B
-�@�e��`�P�b�g�͕ʃ��\�b�h�Ńf�[�^�擾
-�@KEEP�FgetKeepTickets()
-�@PROBLEM�FgetProblemTickets()
-�@TRY�FgetTryTickets()
-�@TODO�FgetTodoTickets()
-�@OTHER:getOtherTickets()
-�@��L���\�b�h����getTickets(category, status, response)�̃��\�b�h�őΏۂ̃f�[�^���擾���Ă���B
-�@category�FKEEP�APROBLEM�ATRY�ATODO�AOTHER�̂ǂꂩ��n��
-�@status�Fregistration(�o�^)�Aapproval(���F)�Atrying(Try��)�Anull���Z�b�g���Ă���
-�@responce�F��͒��@category�̒l�ɑ΂���#����Responce���Z�b�g���Ă���B#����Responce���s��
-�@
-�@getTickets���\�b�h�ɂ킽������񂩂�ADB�������擾���āA�擾�����f�[�^��
-�@�����񌋍����āA�V����HTML���擾���Ă���B
-�@
-�@
+→getAllTickets()ですべてのチケット情報を取得している。
+　各種チケットは別メソッドでデータ取得
+　KEEP：getKeepTickets()
+　PROBLEM：getProblemTickets()
+　TRY：getTryTickets()
+　TODO：getTodoTickets()
+　OTHER:getOtherTickets()
+　上記メソッドからgetTickets(category, status, response)のメソッドで対象のデータを取得している。
+　category：KEEP、PROBLEM、TRY、TODO、OTHERのどれかを渡す
+　status：registration(登録)、approval(承認)、trying(Try中)、nullをセットしている
+　responce：解析中　categoryの値に対する#○○Responceをセットしている。#○○Responceが不明
+　
+　getTicketsメソッドにわたった情報から、DBより情報を取得して、取得したデータ分
+　文字列結合して、新しいHTMLを取得している。
+　
+　
 
-�E�w���v���
-
-
-�E�V�K�`�P�b�g�쐬���
+・ヘルプ画面
 
 
-
-�E�����`�P�b�g�f�[�^�X�V���
-
-
-�E�����`�P�b�g�폜����
+・新規チケット作成画面
 
 
 
-�E�^�u�؂�ւ�
+・既存チケットデータ更新画面
+
+
+・既存チケット削除処理
+
+
+
+・タブ切り替え
 
 
 
