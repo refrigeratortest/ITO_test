@@ -50,10 +50,16 @@ loadFunc()
 　
 
 ・ヘルプ画面
+ヘルプボタンを押したら、スクリプト処理が行われる。※buttonはopener2でbuttonのタグにクリックイベントは無い。CSSで指定されてるのか？
+以下のイベントでヘルプダイアログが表示されている。
+$('#opener2').button({    icons: {        primary: 'ui-icon-help'    }}).click(function() {    $("#dialog-help").dialog( "open" );});
 
+特に特殊な処理を行っているわけではない。
+ヘルプ画面のデザインは、index.htmlのbodyタグ内に記載されている。
 
 ・新規チケット作成画面
-
+基本的にダイアログの表示方法はヘルプ画面と同じ。処理は以下。
+$( "#opener1" ).button({    icons: {        primary: 'ui-icon-plusthick'    }}).click(function() {    $( "#dialog" ).dialog( "open" );});
 
 
 ・既存チケットデータ更新画面
