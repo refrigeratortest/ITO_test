@@ -1,0 +1,24 @@
+20171206
+
+１．Node.jsのインストール
+２．VSCodeの拡張機能のインストール
+３．node.jsのサンプルプロジェクトを作成し、ブラウザ表示を行う
+→サンプルプロジェクトは以下のサイトを参考にする
+https://qiita.com/dz_/items/f24b66f9f464b054dd1b
+
+４．npm uninstall jadeを行い、npm install ejsを行う。
+
+５．Viewフォルダの情報を拡張子jadeから拡張子ejsに変更
+→jadeがHTML形式でないため、わかりずらい
+６．app.jsの「app.set('view engine', 'jade');」から「app.set('view engine', 'ejs');」に変更
+
+
+サンプルプログラムの動作について
+１．サービスを起動したときに「./bin/www」と表示される。
+プログラムはwwwファイルから読み込まれ動作が行われる。
+ポートの設定はwwwファイルで行う。
+
+２．app.jsにプログラムの情報が記載されている。
+
+
+
